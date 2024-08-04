@@ -10,16 +10,16 @@ let handler = async (m, { text }) => {
 	const $ = cheerio.load(link.data)
 	let wik = $('#firstHeading').text().trim()
 	let resulw = $('#mw-content-text > div.mw-parser-output').find('p').text().trim()
-	m.reply(`▢ *Wikipedia*
+	m.reply(`▢ *ويكيبيديا*
 
 ‣ ${resulw}`)
 } catch (e) {
   m.reply(`⚠️ ${mssg.searchError}`)
 }
 }
-handler.help = ['wikipedia']
-handler.tags = ['tools']
-handler.command = ['wiki','wikipedia'] 
+handler.help = ['ويكبيديا']
+handler.tags = ['الادوات']
+handler.command = ['ويكا','ويكيبيديا'] 
 
 
 export default handler
